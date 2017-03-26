@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class PPP extends Model
 {
-    protected $table = 'ppp';
+    protected $table = 'ppps';
 }

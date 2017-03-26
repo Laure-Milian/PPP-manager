@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePppTable extends Migration
+class CreatePppsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePppTable extends Migration
      */
     public function up()
     {
-        Schema::create('ppp', function(Blueprint $table) {
+        Schema::create('ppps', function(Blueprint $table) {
             $table->increments('id');
             $table->text('progress')->nullable();
             $table->text('problems')->nullable();
@@ -32,6 +32,6 @@ class CreatePppTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ppp');
+        Schema::dropIfExists('ppps');
     }
 }
