@@ -13,7 +13,16 @@ class CreatePppTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ppp', function(Blueprint $table) {
+            $table->increments('id');
+            $table->text('progress')->nullable();
+            $table->text('problems')->nullable();
+            $table->text('planned')->nullable();
+            $table->text('notes')->nullable();
+            $table->timestamps();
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreatePppTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ppp');
     }
 }
