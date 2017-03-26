@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.css">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -82,6 +82,7 @@
     </div>
 
     <!-- Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
