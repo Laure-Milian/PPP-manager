@@ -9,7 +9,13 @@
 
                 <div class="panel-body">
                     You are logged in!
-                </div>
+                    @foreach ($ppps as $ppp)
+                    {{$ppp->progress}}
+                    @endforeach
+<!--                     <form method="post" action="/create">
+                    	
+                    </form>
+ -->                </div>
             </div>
         </div>
     </div>
