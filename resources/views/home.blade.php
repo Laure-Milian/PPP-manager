@@ -18,8 +18,9 @@
 			</div>
 			<div id="ppps_list">
 				<ul>
-					<li>PPP 1</li>
-					<li>PPP 2</li>
+					@foreach ($ppps as $ppp)
+					<li>{{$ppp->created_at}}</li>
+					@endforeach
 				</ul>			
 			</div>
 		</div>
@@ -48,12 +49,43 @@
 			<div>
 				blabla
 			</div>
+
+			<div>
+				<form action="/create" method="post">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+					<div>
+						<label for="progress"># Progress</label>
+					</div>
+					<div>
+						<textarea id="progress" name="progress"></textarea>
+					</div>
+					<div>
+						<label for="problems"># Problems</label>
+					</div>
+					<div>
+						<textarea id="problems" name="problems"></textarea>
+					</div>
+					<div>
+						<label for="planned"># Planned</label>
+					</div>
+					<div>
+						<textarea id="planned" name="planned"></textarea>
+					</div>
+					<div>
+						<label for="notes">Notes</label>
+					</div>
+					<div>
+						<textarea id="notes" name="notes"></textarea>
+					</div>
+					<div>
+						<input type="submit" name="submit" value="PPP terminé">
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 
-	@foreach ($ppps as $ppp)
-	{{$ppp->progress}}
-	@endforeach
 
 
 </div>

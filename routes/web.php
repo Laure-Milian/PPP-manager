@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', 'PppController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/', 'PppController@index');
+
+Route::post('/create', 'PppController@create');
