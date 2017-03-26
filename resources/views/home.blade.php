@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="ui container">
 	<div class="ui grid">
 		<div class="four wide column">
-			<a href="/create" class="ui teal button">New PPP</a>
 			<div>
 				<select>
 					<option>2017</option>

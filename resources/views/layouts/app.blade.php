@@ -21,7 +21,11 @@
     </script>
 </head>
 <body>
-    <div id="app">
+<div class="ui container">
+<div class="ui menu">
+  <a class="item" href="/new">Create PPP</a>
+  <a class="item" href="/"> Historique </a>
+</div>
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -79,7 +83,7 @@
         </nav>
 
         @yield('content')
-    </div>
+</div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.js"></script>
