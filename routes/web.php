@@ -19,4 +19,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/', 'PppController@index');
 
+Route::get('/new', 'PppController@indexNew');
+
 Route::post('/create', 'PppController@create');
+
+Route::get('/find/{id}', 'PppController@find');
